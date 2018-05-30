@@ -38,7 +38,7 @@
   states are different, it means that the button was either
   pressed or released.
  */
-boolean buttonStates[8];
+bool buttonStates[8];
 
 /*
   This array holds the names of the buttons being read.
@@ -93,8 +93,8 @@ void loop() {
 
   // Iterate through all the buttons:
   for (byte thisButton = 0; thisButton < 8; thisButton++) {
-    boolean lastState = buttonStates[thisButton];
-    boolean newState = Esplora.readButton(buttons[thisButton]);
+    bool lastState = buttonStates[thisButton];
+    bool newState = Esplora.readButton(buttons[thisButton]);
     if (lastState != newState) { // Something changed!
       /*
         The Keyboard library allows you to "press" and "release" the

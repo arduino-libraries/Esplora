@@ -33,7 +33,7 @@
 /*
  * this variable tells if the data-logging is currently active.
  */
-boolean active = false;
+bool active = false;
 
 /*
  * this variable holds the time in the future when the sketch
@@ -57,7 +57,7 @@ unsigned long startedAt = 0;
  * the "just-after-activation" stuff is run some time later than
  * the code that says "be active now".
  */
-boolean justActivated = false;
+bool justActivated = false;
 
 
 /*
@@ -66,7 +66,7 @@ boolean justActivated = false;
  * this variable and the current status of the switch, it means
  * that the button was either pressed or released.
  */
-boolean lastStartBtn = HIGH;
+bool lastStartBtn = HIGH;
 
 /*
  * Initialization code. The virtual USB keyboard must be
@@ -200,7 +200,7 @@ void activeDelay(unsigned long amount) {
  * function is running.
  */
 void checkSwitchPress() {
-  boolean startBtn = Esplora.readButton(SWITCH_DOWN);
+  bool startBtn = Esplora.readButton(SWITCH_DOWN);
 
   if (startBtn != lastStartBtn) {
     if (startBtn == HIGH) { // button released
