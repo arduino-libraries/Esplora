@@ -20,7 +20,7 @@
 // variables:
 int lightMin = 1023;        // minimum sensor value
 int lightMax = 0;           // maximum sensor value
-boolean calibrated = false;  // whether the sensor's been calibrated yet
+bool calibrated = false;  // whether the sensor's been calibrated yet
 
 void setup() {
   // initialize the serial communication:
